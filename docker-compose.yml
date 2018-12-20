@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  influxdb:
+    restart: always
+    image: influxdb:1.7
+    ports:
+      - "${PORT}:8086"
+    volumes:
+      - ${DATA_DIRECTORY}:/var/lib/influxdb
